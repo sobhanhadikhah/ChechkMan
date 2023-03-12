@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Onetwothirtyfour";
+    src: url("./fonts/Onetwothirtyfour.ttf");
+}
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url("./fonts/Poppins-Regular.otf");
+}
+
+@font-face {
+    font-family: "DominosBlast";
+    src: url("./fonts/DominosBlast.otf");
+}
