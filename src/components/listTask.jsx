@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 const ListTask = () => {
     const todo = useSelector(state => state.todoReducerState.todo)
     return (
-        <div>
+        <div className='mx-3' >
             <div className='h-[300px] my-3 md:my-0  md:ml-3  rounded-md bg-gray-300 overflow-auto   ' >
 
                 <h1 className='text-3xl p-4 grid  ' >All my Tasks</h1>
