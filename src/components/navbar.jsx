@@ -9,9 +9,9 @@ const Navbar = () => {
             <div className='w-full' >
                 <Link to="/" className='text-3xl   ml-4 flex items-center font-Onetwothirtyfour ' >
 
-                    toDoList
+                    <span className='text-green-500 bg-black mr-1 rounded-full' ><AiFillCheckSquare className='' /></span>
+                    CheckMan
 
-                    <span className='text-green-500 bg-black ml-1 ' ><AiFillCheckSquare /></span>
 
                 </Link>
             </div>
@@ -30,7 +30,8 @@ const Navbar = () => {
                     {NavbarText.map(({ title, id, path }) => {
                         return <Link to={path} className='hover:text-blue-400 text-sm transition duration-100 cursor-pointer ease-in-out ' key={id} >{title}</Link>
                     })}
-                    <label  htmlFor="AcceptConditions" className="relative h-8 w-14 cursor-pointer">
+                    <div className='text-gray-300' >|</div>
+                    <label htmlFor="AcceptConditions" className="relative h-8 w-14 cursor-pointer">
                         <input type="checkbox" id="AcceptConditions" className="peer sr-only" />
 
                         <span

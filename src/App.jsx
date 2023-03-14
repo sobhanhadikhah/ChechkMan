@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <div>
+      <div className="" >
         <Routes>
           <Route path="/" element={<AddListPage />} />
           <Route path="about" element={<About />} />

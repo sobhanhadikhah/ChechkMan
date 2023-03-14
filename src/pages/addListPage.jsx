@@ -19,7 +19,7 @@ const AddListPage = () => {
     }
     return (
         <div>
-            <div className='max-w-[1240px] mx-auto h-screen  ' >
+            <div className='max-w-[1240px] mx-auto   ' >
                 <div className='' >
                     {/* adding prosecering */}
                     <div className='grid grid-cols-1 md:grid-cols-2' >
