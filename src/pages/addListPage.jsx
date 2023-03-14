@@ -5,14 +5,18 @@ import { nanoid } from '@reduxjs/toolkit';
 import { addTodo, removeTodo, toggleTodo } from '../features/reducer';
 import { motion } from 'framer-motion';
 import { inputToDoVarition } from '../utiles/motion';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const AddListPage = () => {
     const [text, setText] = useState("")
     const disPatch = useDispatch();
     const handleToAdd = (e) => {
         e.preventDefault();
         if (text.trim() === "") {
+            toast.error("Please Type any Words. ")
             return;
         }
+        toast.success("Added.")
         disPatch(addTodo({ id: nanoid(), text: text.trim(), completed: false }))
         setText("")
     }
@@ -21,6 +25,7 @@ const AddListPage = () => {
     }
     return (
         <div>
+            <ToastContainer />
             <div className='max-w-[1240px] mx-auto   ' >
                 <div className='' >
                     {/* adding prosecering */}
