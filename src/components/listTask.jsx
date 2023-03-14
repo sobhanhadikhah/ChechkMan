@@ -6,6 +6,8 @@ import { inputToDoVarition, navbarVarition } from '../utiles/motion';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const ListTask = () => {
+    const todo = useSelector(state => state.todoReducerState.todo);
+    const [staetTodo, setstaetTodo] = useState([])
     const disPatch = useDispatch();
     const handleOnRemove = (itemId) => {
         toast.error(`Remove Item ${itemId}`)
@@ -15,7 +17,10 @@ const ListTask = () => {
         disPatch(toggleTodo(itemId))
 
     }
-    const todo = useSelector(state => state.todoReducerState.todo)
+    useEffect(() => {
+        setstaetTodo(todo)
+        console.log(staetTodo);
+    }, [todo])
     return (
         <div className='mx-3 shadow-2xl shadow-blue-900 ' >
             <div className='bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg ' >
@@ -23,14 +28,14 @@ const ListTask = () => {
                 <h1 className='text-3xl p-4 grid text-blackfont-Poppins-Regular  tracking-widest font-Poppins-Regular ' >All my Tasks</h1>
             </div>
             <div className=' h-[400px] sm:h-[300px] md:h-[500px] lg:h-[800px] my-3 md:my-0  md:ml-3  rounded-md    overflow-auto   ' >
-                <Reorder.Group values={todo} onReorder={() => disPatch(addTodo())}  >
+                <Reorder.Group values={staetTodo} onReorder={setstaetTodo}  >
 
                     <div className='mx-3 gap-2 flex flex-col  ' >
 
-                        {todo.map((todos, i) => {
+                        {staetTodo && staetTodo.map((todos, i) => {
 
                             return (
-                                <Reorder.Item key={todos.id} className='cursor-grab' >
+                                <Reorder.Item value={todos} key={todos.id} className='cursor-grab' >
 
                                     <motion.div variants={inputToDoVarition} initial="hidden" animate="visible" className='flex flex-row justify-center items-center '>
                                         <div style={{ textDecoration: todos.completed ? "line-through" : "none" }}
