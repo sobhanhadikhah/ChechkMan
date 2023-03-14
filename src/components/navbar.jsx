@@ -2,14 +2,15 @@ import { Link } from 'react-router-dom';
 import { NavbarText } from '../utiles/constanse';
 import { FcAbout } from "react-icons/fc"
 import { AiFillCheckSquare } from "react-icons/ai";
+import { SiCheckio } from "react-icons/si"
 const Navbar = () => {
 
     return (
         <div className='max-w-[1240px] mx-auto h-[98px]  flex   items-center ' >
             <div className='w-full' >
-                <Link to="/" className='text-3xl   ml-4 flex items-center font-Onetwothirtyfour ' >
+                <Link to="/" className='text-3xl   ml-4 flex items-center font-extrabold bg-gradient-to-r from-emerald-500 to-emerald-900 bg-clip-text text-transparent tracking-widest ' >
 
-                    <span className='text-green-500 bg-black mr-1 rounded-full' ><AiFillCheckSquare className='' /></span>
+                    <span> <SiCheckio className='text-black mr-2 ' size={30} /> </span>
                     CheckMan
 
 

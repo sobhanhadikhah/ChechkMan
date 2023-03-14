@@ -15,3 +15,21 @@
     font-family: "DominosBlast";
     src: url("./fonts/DominosBlast.otf");
 }
+.btn {
+
+    color:var(--cyan);
+    margin-top: 35px;
+    background-color: var(--mainlight);
+    border: 1px solid var(--cyan);
+    border-radius: 20px;
+    width: 90px;
+    height: 50px;
+    text-shadow: var(--cyan) 0px 0px 20px;
+    box-shadow: rgb(95, 240, 208, 15%)  0px 0px 50px;
+}
+.btn:hover {
+    color: var(--main);
+    background-color: var(--cyan);
+    cursor: pointer;
+    box-shadow: var(--cyan) 0px 0px 50px;
+}
