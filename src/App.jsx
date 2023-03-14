@@ -4,14 +4,15 @@ import { useSelector } from "react-redux";
 import { About, AddListPage, Notfound } from "./pages"
 import { useTitle } from './hooks/usetitle';
 import { Route, Routes } from "react-router-dom";
-import { saveToDo } from "./hooks/savestoreg";
+import { motion } from "framer-motion";
+import { navbarVarition } from "./utiles/motion";
 const App = () => {
   const todo = useSelector(state => state.todoReducerState.todo);
   useTitle("Home")
   return (
     <div>
-      <Navbar />
-      <div className="" >
+      <motion.div variants={navbarVarition} initial="hidden" animate="visible"  ><Navbar /></motion.div>
+      <div  >
         <Routes>
           <Route path="/" element={<AddListPage />} />
           <Route path="about" element={<About />} />
