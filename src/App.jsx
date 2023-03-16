@@ -17,7 +17,7 @@ const App = () => {
 
   return (
     <AnimatePresence mode="wait" >
-      <div className="h-screen dark:bg-slate-800 bg-white "
+      <div className="h-screen dark:bg-slate-800 bg-[#F5F5F5] "
       >
 
         <motion.div variants={navbarVarition} initial="hidden" animate="visible"  >

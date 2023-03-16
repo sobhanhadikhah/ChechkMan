@@ -31,12 +31,13 @@ const AddListPage = () => {
             <div className='max-w-[1240px] mx-auto   ' >
                 <div className='' >
                     {/* adding prosecering */}
-                    <div className='grid grid-cols-1 md:grid-cols-2' >
-                        <div  >
+                    <div className='grid grid-cols-1 md:grid-cols-1' >
+
+                        {/* to do listing here */}
+                        <div className='my-4' >
                             <InputToDo handleChange={handleChange} handleToAdd={handleToAdd} text={text} setText={setText} />
 
                         </div>
-                        {/* to do listing here */}
                         <motion.div variants={inputToDoVarition} initial="hidden" animate="visible" >
 
                             <ListTask />

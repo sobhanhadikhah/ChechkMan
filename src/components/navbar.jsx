@@ -62,7 +62,7 @@ const Navbar = ({ setTheme, theme }) => {
                 </ul>
             </motion.div>
             <div>
-                <BiMenuAltRight size={30} onClick={() => setDarkModeToggle(!darkModeToggle)} className='hover:text-green-600 text-purple-500 lg:hidden block ' />
+                <BiMenuAltRight size={30} onClick={() => setDarkModeToggle(!darkModeToggle)} className='hover:text-green-600 text-purple-500 lg:hidden block mr-3' />
             </div>
 
 

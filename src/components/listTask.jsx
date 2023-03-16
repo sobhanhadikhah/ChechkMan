@@ -22,12 +22,14 @@ const ListTask = () => {
         console.log(staetTodo);
     }, [todo])
     return (
-        <div className='mx-3 shadow-2xl shadow-blue-900 -z-10 ' >
-            <div className='bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg ' >
+        <div className='mx-3 shadow-inner dark:shadow-2xl dark:shadow-blue-800 shadow-black -z-10 ' >
+            <div className=' rounded-lg ' >
 
-                <h1 className='text-3xl p-4 grid text-blackfont-Poppins-Regular  tracking-widest font-Poppins-Regular ' >All my Tasks</h1>
+                <h1 className='text-3xl p-4 grid text-blackfont-Poppins-Regular  tracking-widest font-Poppins-Regular bg-gradient-to-r from-cyan-500 to-blue-500
+                text-transparent bg-clip-text ' >All my Tasks</h1>
+                <div className='border mx-3  border-purple-500 ' />
             </div>
-            <div className=' h-[400px] sm:h-[300px] md:h-[500px] lg:h-[800px] my-3 md:my-0  md:ml-3  rounded-md    overflow-auto   ' >
+            <div className=' h-[350px] sm:h-[300px] md:h-[500px] lg:h-[500px] my-3 md:my-0  md:ml-3  rounded-md    overflow-auto   ' >
                 <Reorder.Group values={staetTodo} onReorder={setstaetTodo}  >
 
                     <div className='mx-3 gap-2 flex flex-col  ' >
@@ -39,9 +41,9 @@ const ListTask = () => {
 
                                     <motion.div variants={inputToDoVarition} initial="hidden" animate="visible" className='flex flex-row justify-center items-center '>
                                         <div style={{ textDecoration: todos.completed ? "line-through" : "none" }}
-                                            className='bg-slate-700  inline-flex   my-2   font-Poppins-Regular decoration-white w-full p-2 py-3 capitalize  rounded-md' >
-                                            <span className='text-white  px-2 justify-center items-center  rounded-full ' >{i + 1} -    </span>
-                                            <div className='bg-gradient-to-r from-purple-500 to-amber-400 bg-clip-text text-transparent' >{todos.text}</div>
+                                            className='dark:bg-slate-700 bg-gray-300 inline-flex   my-2   font-Poppins-Regular decoration-white w-full p-2 py-3 capitalize  rounded-md' >
+                                            <span className='dark:text-white text-black   px-2 justify-center items-center  rounded-full ' >{i + 1} -    </span>
+                                            <div className=' bg-gradient-to-r from-purple-500 to-amber-400 bg-clip-text text-transparent' >{todos.text}</div>
                                         </div>
                                         <input type='checkbox' onClick={() => handleOnToggle(todos.id)} className='bg-green-400 rounded-full ml-4  cursor-alias ' >
 
