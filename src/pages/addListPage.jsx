@@ -7,7 +7,9 @@ import { motion } from 'framer-motion';
 import { inputToDoVarition } from '../utiles/motion';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useTitle from '../hooks/usetitle';
 const AddListPage = () => {
+    useTitle("Home");
     const [text, setText] = useState("")
     const disPatch = useDispatch();
     const handleToAdd = (e) => {

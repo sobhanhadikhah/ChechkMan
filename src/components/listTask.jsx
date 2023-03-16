@@ -22,7 +22,7 @@ const ListTask = () => {
         console.log(staetTodo);
     }, [todo])
     return (
-        <div className='mx-3 shadow-2xl shadow-blue-900 ' >
+        <div className='mx-3 shadow-2xl shadow-blue-900 -z-10 ' >
             <div className='bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg ' >
 
                 <h1 className='text-3xl p-4 grid text-blackfont-Poppins-Regular  tracking-widest font-Poppins-Regular ' >All my Tasks</h1>
@@ -47,10 +47,10 @@ const ListTask = () => {
 
 
                                         </input>
-                                        <div onClick={() => handleOnRemove(todos.id)} className='  p-1 text-red-400 rounded-md font-Poppins-Regular font-semibold ml-4 cursor-pointer hover:underline ' >
+                                        <button onClick={() => handleOnRemove(todos.id)} className='  p-1 text-red-400 rounded-md font-Poppins-Regular font-semibold ml-4 cursor-pointer hover:underline ' >
 
                                             Remove
-                                        </div>
+                                        </button>
                                     </motion.div>
                                 </Reorder.Item>
                             )

@@ -1,6 +1,9 @@
 import { useEffect } from "react";
-export const useTitle = (title)=>{
+ const useTitle = (title)=>{
+
         useEffect(()=>{
-            document.title = `toDO | ${title}`
+            document.title = `${title} | Checkman `
         },[title])
+        
 }
+export default useTitle
