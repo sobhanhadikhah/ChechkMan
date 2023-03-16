@@ -36,7 +36,7 @@ export const toggleDarkModeMenu = {
         scale:1,
         transition:{
             
-            duration:0.9,
+            duration:0.4,
             
             
         }
