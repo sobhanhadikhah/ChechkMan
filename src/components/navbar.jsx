@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { NavbarText } from '../utiles/constanse';
 import { FcAbout } from "react-icons/fc"
-import { SiCheckio } from "react-icons/si"
+import { GiCaptainHatProfile } from "react-icons/gi"
 import { GrSystem } from "react-icons/gr";
 import { WiDaySunny } from "react-icons/wi";
 import { motion } from 'framer-motion';
@@ -27,13 +27,14 @@ const Navbar = ({ setTheme, theme }) => {
     ]
 
 
+
     return (
         <div className='max-w-[1240px] mx-auto h-[98px]  flex    items-center ' >
             <div className='w-full' >
                 <Link to="/" className='text-3xl   ml-4 flex items-center font-extrabold bg-gradient-to-r from-emerald-500 to-emerald-900 bg-clip-text text-transparent tracking-widest ' >
 
 
-                    <span> <SiCheckio className='text-black dark:text-purple-500 mr-2 ' size={30} /> </span>
+                    <span className="bg-black dark:bg-white rounded-full text-white dark:text-black dark:border-black border-white p-2 border-2 mr-1 " > <GiCaptainHatProfile className='   ' size={20} /> </span>
                     CheckMan
 
 
