@@ -27,7 +27,6 @@ const AddListPage = () => {
     }
     return (
         <div>
-            <ToastContainer />
             <div className='max-w-[1240px] mx-auto   ' >
                 <div className='' >
                     {/* adding prosecering */}
@@ -43,6 +42,7 @@ const AddListPage = () => {
                             <ListTask />
                         </motion.div>
                     </div>
+                    <ToastContainer />
                 </div>
                 {/* navigition bottome is here */}
                 {/* <div className='block lg:hidden' >

@@ -43,3 +43,45 @@ export const toggleDarkModeMenu = {
     
     }
 }
+export const aboutPic = {
+    hidden:{
+        scale:0
+    },
+    visible:{
+        scale:1,
+        transition:{
+            type:"spring"
+        }
+    }
+}
+export const aboutH1 = {
+    hidden:{
+        opacity:0,
+        y:-40
+    },
+    visible:{
+        opacity:1,
+        y:0,
+        transition:{
+            duration:1
+        }
+    }
+}
+export const aboutBulb = {
+        
+        visible:{
+            color:"#ffbb73",
+            transition:{
+                duration:0.6
+            }
+        }
+}
+
+
+
+
+
+
+
+
+
