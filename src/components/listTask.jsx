@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { motion, Reorder } from 'framer-motion';
 import { addTodo, removeTodo, toggleTodo } from '../features/reducer';
-import { inputToDoVarition, navbarVarition } from '../utiles/motion';
+import { aboutH1, inputToDoVarition, navbarVarition } from '../utiles/motion';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const ListTask = () => {
@@ -39,7 +39,7 @@ const ListTask = () => {
                             return (
                                 <Reorder.Item value={todos} key={todos.id} className='cursor-grab' >
 
-                                    <motion.div variants={inputToDoVarition} initial="hidden" animate="visible" className='flex flex-row justify-center items-center '>
+                                    <motion.div variants={aboutH1} whileInView="visible" initial="hidden" className='flex flex-row justify-center items-center '>
                                         <div style={{ textDecoration: todos.completed ? "line-through" : "none" }}
                                             className='dark:bg-slate-700 bg-gray-300 inline-flex   my-2   font-Poppins-Regular decoration-white w-full p-2 py-3 capitalize  rounded-md' >
                                             <span className='dark:text-white text-black   px-2 justify-center items-center  rounded-full ' >{i + 1} -    </span>

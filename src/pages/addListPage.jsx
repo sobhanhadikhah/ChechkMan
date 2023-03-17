@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
 import { addTodo, removeTodo, toggleTodo } from '../features/reducer';
 import { motion } from 'framer-motion';
-import { inputToDoVarition } from '../utiles/motion';
+import { aboutH1, inputToDoVarition } from '../utiles/motion';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useTitle from '../hooks/usetitle';
@@ -37,17 +37,14 @@ const AddListPage = () => {
                             <InputToDo handleChange={handleChange} handleToAdd={handleToAdd} text={text} setText={setText} />
 
                         </div>
-                        <motion.div variants={inputToDoVarition} initial="hidden" animate="visible" >
+                        <motion.div variants={aboutH1} whileInView="visible" initial="hidden" >
 
                             <ListTask />
                         </motion.div>
                     </div>
                     <ToastContainer />
                 </div>
-                {/* navigition bottome is here */}
-                {/* <div className='block lg:hidden' >
-                    <NavigitionBottem    />
-                </div> */}
+
 
             </div>
         </div>
