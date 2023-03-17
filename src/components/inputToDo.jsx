@@ -3,7 +3,7 @@ const InputToDo = ({ handleChange, handleToAdd, text, setText }) => {
 
     return (
         <div>
-            <div className=" absolute lg:relative bottom-0 w-full lg:w-auto  px-3 lg:mx-3 shadow-md shadow-purple-500 rounded-sm  " >
+            <div className=" absolute lg:relative bottom-0 w-full lg:w-auto  px-3 lg:mx-3 shadow-md shadow-purple-500 rounded-sm " >
                 <h1 className='rounded-t-md bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent tracking-widest font-extrabold
                   text-3xl font-Poppins-Regular lg:block hidden   ' >Add To List</h1>
                 <div className="border border-gray-400 mb-5 hidden lg:block shadow-inner  " />

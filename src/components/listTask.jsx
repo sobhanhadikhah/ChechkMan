@@ -12,21 +12,42 @@ const ListTask = () => {
     const handleOnRemove = (itemId) => {
         toast.error(`Remove Item ${itemId}`)
         disPatch(removeTodo(itemId))
+
     }
     const handleOnToggle = (itemId) => {
         disPatch(toggleTodo(itemId))
 
     }
-    useEffect(() => {
-        setstaetTodo(todo)
+
+    const handleOnSave = () => {
+        localStorage.setItem('mytodos', JSON.stringify(todo));
+        console.log("saved");
+    }
+
+    const handleOnLoad = () => {
+        const todoSave = JSON.parse(localStorage.getItem('mytodos'));
+        if (todoSave) {
+
+            setstaetTodo(todoSave)
+        }
+
         console.log(staetTodo);
-    }, [todo])
+
+    }
+    useEffect(() => {
+        
+
+    }, [])
+
+
     return (
         <div className='mx-3 shadow-inner dark:shadow-2xl dark:shadow-blue-800 shadow-black -z-10 ' >
             <div className=' rounded-lg ' >
 
-                <h1 className='text-3xl p-4 grid text-blackfont-Poppins-Regular  tracking-widest font-Poppins-Regular bg-gradient-to-r from-cyan-500 to-blue-500
-                text-transparent bg-clip-text ' >All my Tasks</h1>
+                <h1 className='text-3xl p-4  text-blackfont-Poppins-Regular  tracking-widest font-Poppins-Regular bg-gradient-to-r from-cyan-500 to-blue-500
+                text-transparent bg-clip-text block ' >All my Tasks  <button onClick={handleOnSave} className='text-sm bg-red-500 text-white p-1 rounded-md ' >save</button>
+                    <button onClick={handleOnLoad} className='text-sm bg-purple-500 text-white mx-3 p-1 rounded-md '  >load</button>
+                </h1>
                 <div className='border mx-3  border-purple-500 ' />
             </div>
             <div className=' h-[350px] sm:h-[300px] md:h-[500px] lg:h-[500px] my-3 md:my-0  md:ml-3  rounded-md    overflow-auto   ' >

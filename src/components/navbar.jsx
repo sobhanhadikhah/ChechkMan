@@ -9,7 +9,9 @@ import { motion } from 'framer-motion';
 import { MdNightlight } from "react-icons/md"
 import { inputToDoVarition, toggleDarkModeMenu } from '../utiles/motion';
 import { BiMenuAltRight } from "react-icons/bi"
+import { useSelector } from 'react-redux';
 const Navbar = ({ setTheme, theme }) => {
+    const todo = useSelector(state => state.todoReducerState.todo);
     const [darkModeToggle, setDarkModeToggle] = useState(false);
     const darkModeOptions = [
         {
@@ -25,6 +27,8 @@ const Navbar = ({ setTheme, theme }) => {
             icon: <ion-icon name="cog-outline"></ion-icon>
         },
     ]
+
+
 
 
     return (
