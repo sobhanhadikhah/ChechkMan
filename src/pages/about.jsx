@@ -30,11 +30,11 @@ const About = () => {
 
                 </motion.div>
 
-                <div className=" flex items-center justify-center py-4  " >
+                <motion.div variants={aboutH1} whileInView="visible" initial="hidden" className=" flex items-center justify-center py-4  " >
                     <div  >
-                        <h1 className="text-sm text-black dark:text-sky-500 tracking-widest font-Poppins-Regular" >A place for planning and success.</h1>
+                        <h1 className="text-sm text-black dark:text-sky-500 tracking-widest font-Poppins-Regular text-center" >A place for planning and success.</h1>
                         <div className="flex flex-col py-4  text-dark dark:text-white  " >
-                            <ul className="dark:bg-slate-700   bg-slate-300 rounded-lg " >
+                            <ul className="dark:bg-slate-700   bg-slate-300 rounded-lg p-4 font-Poppins-Regular " >
                                 {appVer.map(varInfo => (
                                     <li key={varInfo.id} className=" py-1 mx-3 " >{varInfo.title} : <span className="mx-1" >{varInfo.level}</span> </li>
 
@@ -44,7 +44,7 @@ const About = () => {
                     </div>
 
 
-                </div>
+                </motion.div>
 
             </div>
 
